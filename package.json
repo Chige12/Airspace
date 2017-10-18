@@ -1,0 +1,19 @@
+{
+  "name": "arduino-serial-js",
+  "version": "1.0.0",
+  "description": "ArduinoでNode.jsとシリアル通信して文字列を送受信するサンプル",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sifue",
+  "license": "ISC",
+  "devDependencies": {
+    "serialport": "^4.0.7"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "request": "^2.83.0",
+    "socket.io": "^2.0.3"
+  }
+}
