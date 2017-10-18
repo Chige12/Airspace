@@ -1,23 +1,17 @@
 const SerialPort = require('serialport');
 const socketio = require("socket.io"); // ソケット通信
 const http = require('http');
-const url = require('url');
 const request = require('request');
 const express = require('express');
 
-'use strict';
+'use strict'; //?
 
-// シリアルポートに定期的に書き込んではデータを受け取る
-// パーストークンは \n
-// 1秒おき送信
-
-
-const port = new SerialPort('COM5', { // Windows
+const port = new SerialPort('COM5', { // ポート解放
   parser: SerialPort.parsers.readline('\n'),
   baudrate: 9600
 });
 
-port.on('open', function() {
+port.on('open', function() { //シリアル通信の準備が整ったとき
   console.log('Serial open.');
   setInterval(write, 1000, 'OK\n');
 });
@@ -28,15 +22,16 @@ var io = socketio(server);
 
 server.listen(3000, function() {});
 
-port.on('data', function(data) {
+port.on('data', function(data) { //データを受信したとき
   console.log('Data: ' + data);
-  data = parseInt(data)
+  data = parseInt(data) //dataを数列に変換
+
   switch (data) {
     case 0:
       color = 'red';
       break;
     case 1:
-      color = 'green';
+      color = 'limegreen';
       break;
     case 2:
       color = 'blue';
@@ -48,18 +43,22 @@ port.on('data', function(data) {
       color = 'skyblue';
       break;
     case 5:
-      color = 'pink';
+      color = 'fuchsia'; //pink
       break;
     case 6:
-      color = 'white';
+      color = 'black';
       break;
     default:
       color = 'none';
       break;
   }
   console.log('Color: ' + color);
+
+  //フロントへ送る
   io.emit("colorChange", { value: color });
 });
+
+//-- Arduinoへ送信 --
 
 function write(data) {
   console.log('Write: ' + data);

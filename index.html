@@ -4,34 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Airspace color change animation</title>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
-  <script type="text/javascript">
-    var s = io.connect('http://localhost:3000'); //ローカル
-    // var s = io.connect();
-
-    //サーバから受け取るイベント
-    // s.on("connect", function() {}); // 接続時
-    // s.on("disconnect", function(client) {}); // 切断時
-    // s.on("S_to_C_message", function(data) {
-    //   addMessage(data.value);
-    // });
-    s.on("colorChange", function(color) {
-      console.log('Color: ' + color.value);
-    });
-  </script>
-  <style>
-    body {
-      font-size: 30px;
-      margin: 0;
-      padding: 0;
-    }
-  </style>
+  <link rel="stylesheet" href="background.css">
 </head>
 
-<body id="background">
-  <h1>hogehoge</h1>
+<body>
+  <div class="under" id="under"></div>
+  <div class="over" id="over"></div>
 
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+  <script type="text/javascript" src="./index.js"></script>
 </body>
 
 </html>
