@@ -21,16 +21,28 @@ var animationStyle = 'fade';
 function BG_Change(color) {
   if (overElm.classList.contains(animationStyle) == false) { //over表示の時
     underElm.style.backgroundColor = color; //underの色を切り替え
-    var anmStyleNum = getRandomInt(1, 3);
+    var anmStyleNum = getRandomInt(0, 7);
     switch (anmStyleNum) { //アニメーション変更
-      case 1:
+      case 0:
         animationStyle = 'fade';
         break;
-      case 2:
+      case 1:
         animationStyle = 'slide_right';
         break;
-      case 3:
+      case 2:
         animationStyle = 'slide_left';
+        break;
+      case 3:
+        animationStyle = 'slide_top';
+        break;
+      case 4:
+        animationStyle = 'slide_bottom';
+        break;
+      case 5:
+        animationStyle = 'spiral';
+        break;
+      case 6:
+        animationStyle = 'spiral2';
         break;
     }
   } else {
