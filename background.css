@@ -1,5 +1,18 @@
 body {
     overflow: hidden;
+    margin: 0;
+    padding: 0;
+    cursor: none;
+}
+
+.display-cursor {
+    cursor: auto;
+}
+
+.clerfix::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 .under {
@@ -21,6 +34,85 @@ body {
     top: 0;
     left: 0;
     transition: all 2s;
+    opacity: 1;
+}
+
+.editMode {
+    display: block;
+    position: absolute;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 0;
+    width: calc(100vw - 60px);
+    height: calc(100vh - 60px);
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid white;
+    color: white;
+    transition: all .5s;
+    opacity: 0;
+}
+
+.wrapper {
+    padding: 30px;
+}
+
+.color_test {
+    margin-top: 20px;
+}
+
+h2 {
+    float: left;
+    margin: 10px auto;
+}
+
+p {
+    display: inline-table;
+    padding-left: 30px;
+}
+
+ul {
+    margin: 0;
+}
+
+li {
+    width: 12%;
+    height: 20px;
+    list-style: decimal;
+    float: left;
+    text-align: left;
+    padding: 4px;
+    color: white;
+}
+
+.color_list li:nth-child(n+8) {
+    color: #cccccc;
+}
+
+li button {
+    background: transparent;
+    border: none;
+    cursor: inherit;
+    padding: 4px 12px;
+    color: inherit;
+}
+
+button:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+button:focus {
+    background: rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+
+/*アニメーションリスト*/
+
+div.fade_edit {
     opacity: 1;
 }
 

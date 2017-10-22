@@ -7,11 +7,113 @@
   <link rel="stylesheet" href="background.css">
 </head>
 
-<body>
+<body id="body">
   <div class="under" id="under"></div>
   <div class="over" id="over"></div>
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+  <div class="editMode" id="editMode">
+    <div class="wrapper">
+      <h1>Edit Mode</h1>
+      <div class="sound_test clerfix">
+        <div class="sound_txt">
+          <h2>音声一覧</h2>
+          <p>クリックで再生 (スペースキーでランダム再生)</p>
+        </div>
+        <ul class="sound_list">
+          <li><button onclick="soundTest(1)">作成効果音1</button></li>
+          <li><button onclick="soundTest(2)">作成効果音2</button></li>
+          <li><button onclick="soundTest(3)">作成効果音3</button></li>
+          <li><button onclick="soundTest(4)">作成効果音4</button></li>
+          <li><button onclick="soundTest(5)">作成効果音5</button></li>
+          <li><button onclick="soundTest(6)">作成効果音6</button></li>
+          <li><button onclick="soundTest(7)">作成効果音7</button></li>
+          <li><button onclick="soundTest(8)">作成効果音8</button></li>
+          <li><button onclick="soundTest(9)">作成効果音9</button></li>
+          <li><button onclick="soundTest(10)">作成効果音10</button></li>
+          <li><button onclick="soundTest(11)">作成効果音11</button></li>
+          <li><button onclick="soundTest(12)">作成効果音12</button></li>
+          <li><button onclick="soundTest(13)">作成効果音13</button></li>
+          <li><button onclick="soundTest(14)">ﾁｮｺｺｺ…</button></li>
+          <li><button onclick="soundTest(15)">ﾁｮｺﾁｮｺﾁｮｺ…</button></li>
+          <li><button onclick="soundTest(16)">ﾁｮﾝﾁｮﾝﾁｮﾝﾁｮ…</button></li>
+          <li><button onclick="soundTest(17)">マリオジャンプ</button></li>
+          <li><button onclick="soundTest(18)">ぐきぃ！</button></li>
+          <li><button onclick="soundTest(19)">ルパン タイトルコール</button></li>
+          <li><button onclick="soundTest(20)">ロッキーのテーマ</button></li>
+          <li><button onclick="soundTest(21)">ベートーベン 運命</button></li>
+          <li><button onclick="soundTest(22)">Intel 入ってる</button></li>
+          <li><button onclick="soundTest(23)">このハゲ～～！</button></li>
+          <li><button onclick="soundTest(24)">笑点 OP</button></li>
+          <li><button onclick="soundTest(25)">iPhone 着信音</button></li>
+          <li><button onclick="soundTest(26)">サンシャイン池崎</button></li>
+          <li><button onclick="soundTest(27)">ダースベイダーのテーマ</button></li>
+          <li><button onclick="soundTest(28)">鼻から牛乳</button></li>
+          <li><button onclick="soundTest(29)">ﾃｨｺﾝ♪</button></li>
+          <li><button onclick="soundTest(30)">ピタゴラスイッチ</button></li>
+          <li><button onclick="soundTest(31)">デデーン タイキック!</button></li>
+          <li><button onclick="soundTest(32)">デデドン（絶望）</button></li>
+          <li><button onclick="soundTest(33)">マリオ死亡</button></li>
+          <li><button onclick="soundTest(34)">ワ～オ♥</button></li>
+          <li><button onclick="soundTest(35)">ごまだれ～！</button></li>
+          <li><button onclick="soundTest(36)">ガラスパリン！</button></li>
+          <li><button onclick="soundTest(37)">モ～～</button></li>
+          <li><button onclick="soundTest(38)">ボイ～ン</button></li>
+          <li><button onclick="soundTest(39)">ぽぽぽぽ～ん</button></li>
+          <li><button onclick="soundTest(40)">ファミマ入店音</button></li>
+          <li><button onclick="soundTest(41)">ウワァァァァァ</button></li>
+          <li><button onclick="soundTest(42)">大丈夫だ問題ない</button></li>
+          <li><button onclick="soundTest(43)">エンダ～～</button></li>
+          <li><button onclick="soundTest(44)">なに～!?</button></li>
+          <li><button onclick="soundTest(45)">3分間待ってやる</button></li>
+          <li><button onclick="soundTest(46)">熱盛ｯ！</button></li>
+          <li><button onclick="soundTest(47)">ドカベン</button></li>
+          <li><button onclick="soundTest(48)">UFO ピンクレディー</button></li>
+          <li><button onclick="soundTest(49)">ドラえもん秘密道具</button></li>
+          <li><button onclick="soundTest(50)">火曜サスペンス劇場</button></li>
+          <li><button onclick="soundTest(51)">よ～くかんがえよう～</button></li>
+          <li><button onclick="soundTest(52)">ピアノ売ってちょーだい</button></li>
+          <li><button onclick="soundTest(53)">キノコの歌(ホクト)</button></li>
+          <li><button onclick="soundTest(54)">AC</button></li>
+          <li><button onclick="soundTest(55)">チ～～ン</button></li>
+          <li><button onclick="soundTest(56)">宮川「安いやつやん」</button></li>
+          <li><button onclick="soundTest(57)">ビーヨヨﾖﾖﾖﾝ</button></li>
+          <li><button onclick="soundTest(58)">正解ピポピポピポ～ン</button></li>
+          <li><button onclick="soundTest(59)">正解ピンポ～ン</button></li>
+          <li><button onclick="soundTest(60)">ぐしゃぁぁ</button></li>
+          <li><button onclick="soundTest(61)">どどん！</button></li>
+          <li><button onclick="soundTest(62)">試合終了ゴング</button></li>
+          <li><button onclick="soundTest(63)">残念ブブー</button></li>
+          <li><button onclick="soundTest(64)">F1通過音ファア～ン</button></li>
+          <li><button onclick="soundTest(65)">ビシッとツッコミ</button></li>
+          <li><button onclick="soundTest(66)">問題！デデン！</button></li>
+          <li><button onclick="soundTest(67)">ﾎﾟｶﾝﾎﾟｶﾝポカンポカンぽ...</button></li>
+        </ul>
+      </div>
+
+      <div class="color_test clerfix">
+        <div class="color_txt">
+          <h2>色変更一覧</h2>
+          <p>クリックで色変更 (8番目からはLEDとの色同期がサポートされていません)</p>
+        </div>
+        <ul class="color_list">
+          <li><button onclick="BG_Change('red')">赤(red)</button></li>
+          <li><button onclick="BG_Change('limegreen')">緑(limegreen)</button></li>
+          <li><button onclick="BG_Change('blue')">青(blue)</button></li>
+          <li><button onclick="BG_Change('yellow')">黄色(yellow)</button></li>
+          <li><button onclick="BG_Change('skyblue')">水色(skyblue)</button></li>
+          <li><button onclick="BG_Change('fuchsia')">ピンク(fuchsia)</button></li>
+          <li><button onclick="BG_Change('black')">黒(black)</button></li>
+          <li><button onclick="BG_Change('white')">白(white)</button></li>
+          <li><button onclick="BG_Change('coral')">橙(coral)</button></li>
+          <li><button onclick="BG_Change('greenyellow')">黄緑(greenyellow)</button></li>
+          <li><button onclick="BG_Change('aqua')">アクア(aqua)</button></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="text/javascript" src="./socket.io.js"></script>
   <script type="text/javascript" src="./index.js"></script>
 </body>
 
