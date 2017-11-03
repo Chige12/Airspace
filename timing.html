@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Airspace color change animation</title>
+  <link rel="stylesheet" href="./css/timing.css">
+</head>
+
+<body>
+  <main>
+    <div class="preview">
+      <video id="video" src="./video/E-VIDEO.mp4"></video>
+      <div class="control_panel">
+        <button onclick="videoStart()" class="start_btn" id="start_btn">Start</button>
+        <button onclick="videoCheck()" class="check_btn" id="check_btn">Check</button>
+      </div>
+      <div class="left_LED_wrapper">
+        <div class="LED" id="1"></div>
+        <div class="LED" id="2"></div>
+        <div class="LED" id="3"></div>
+      </div>
+      <div class="right_LED_wrapper">
+        <div class="LED" id="4"></div>
+        <div class="LED" id="5"></div>
+        <div class="LED" id="6"></div>
+      </div>
+      <a class="indexHTML" href="./index.html">もどる</a>
+    </div>
+
+    <button onclick="" class="LED_btn" id="LED_btn">LED</button>
+    <p class="LED_btn_txt">␣ Space key</p>
+    <ul class="LED_change">
+      <li><button class="LED_change_red" onclick="LED_Change('red')">赤</button>
+        <p class="LED_change_key">1</p>
+      </li>
+      <li><button class="LED_change_limegreen" onclick="LED_Change('limegreen')">緑</button>
+        <p class="LED_change_key">2</p>
+      </li>
+      <li><button class="LED_change_blue" onclick="LED_Change('blue')">青</button>
+        <p class="LED_change_key">3</p>
+      </li>
+      <li><button class="LED_change_yellow" onclick="LED_Change('yellow')">黄色</button>
+        <p class="LED_change_key">4</p>
+      </li>
+      <li><button class="LED_change_skyblue" onclick="LED_Change('skyblue')">水色</button>
+        <p class="LED_change_key">8</p>
+      </li>
+      <li><button class="LED_change_fuchsia" onclick="LED_Change('fuchsia')">ピンク</button>
+        <p class="LED_change_key">9</p>
+      </li>
+      <li><button class="LED_change_white" onclick="LED_Change('black')">白</button>
+        <p class="LED_change_key">0</p>
+      </li>
+    </ul>
+  </main>
+  <script type="text/javascript" src="./socket/socket.io.js"></script>
+  <script type="text/javascript" src="./timing.js"></script>
+</body>

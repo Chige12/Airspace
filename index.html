@@ -4,12 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Airspace color change animation</title>
-  <link rel="stylesheet" href="background.css">
+  <link rel="stylesheet" href="./css/background.css">
 </head>
 
 <body id="body">
   <div class="under" id="under"></div>
   <div class="over" id="over"></div>
+  <div class="colorStr" id="str">White</div>
+  <div class="setumei">そっと たたいてみよう!</div>
 
   <div class="editMode" id="editMode">
     <div class="wrapper">
@@ -87,6 +89,10 @@
           <li><button onclick="soundTest(65)">ビシッとツッコミ</button></li>
           <li><button onclick="soundTest(66)">問題！デデン！</button></li>
           <li><button onclick="soundTest(67)">ﾎﾟｶﾝﾎﾟｶﾝポカンポカンぽ...</button></li>
+          <li><button onclick="soundTest(68)">関西電気保安協会</button></li>
+          <li><button onclick="soundTest(69)">ポケモン回復</button></li>
+          <li><button onclick="soundTest(70)">ねっとり熱盛</button></li>
+          <li><button onclick="soundTest(71)">バキューン！</button></li>
         </ul>
       </div>
 
@@ -110,10 +116,16 @@
         </ul>
       </div>
 
+      <a class="timingHTML" href="./timing.html">動画と音のタイミング調整</a>
+      <h2>その他説明</h2>
+      <p>エンターで動画を最初から再生。バックスペースで一時停止/途中再生</p>
+
     </div>
   </div>
 
-  <script type="text/javascript" src="./socket.io.js"></script>
+  <video id="video" src="./video/E-VIDEO.mp4"></video>
+
+  <script type="text/javascript" src="./socket/socket.io.js"></script>
   <script type="text/javascript" src="./index.js"></script>
 </body>
 

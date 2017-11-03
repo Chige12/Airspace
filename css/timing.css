@@ -1,0 +1,180 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    background: #ddd;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.preview {
+    width: 100%;
+    height: 700px;
+    background: #2e2e2e;
+    position: relative;
+}
+
+.indexHTML {
+    position: absolute;
+    padding: 10px 30px;
+    top: 20px;
+    cursor: pointer;
+    left: 20px;
+    background: #222;
+    color: #eee;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.indexHTML:hover {
+    background: #444;
+}
+
+video {
+    margin: auto;
+    padding-top: 30px;
+    display: block;
+    max-height: 600px;
+}
+
+.left_LED_wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 40px;
+}
+
+.right_LED_wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 40px;
+}
+
+.LED {
+    margin: 140px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: black;
+}
+
+.control_panel {
+    display: flex;
+    justify-content: center;
+}
+
+.start_btn {
+    margin: 15px;
+    display: block;
+    padding: 8px 30px;
+    background: transparent;
+    color: #eee;
+    font-size: 1rem;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    border-color: #eee;
+}
+
+.start_btn:hover {
+    background: #222;
+}
+
+.check_btn {
+    margin: 15px;
+    display: block;
+    padding: 8px 30px;
+    background: transparent;
+    color: #eee;
+    font-size: 1rem;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    border-color: #eee;
+}
+
+.check_btn:hover {
+    background: #222;
+}
+
+.LED_btn {
+    margin: 15px auto 0;
+    display: block;
+    padding: 16px 60px;
+    background: #222;
+    color: #eee;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.LED_btn_txt {
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 4px auto;
+}
+
+.LED_change {
+    margin-top: 30px;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.LED_change li {
+    display: block;
+    list-style: none;
+    width: 12%;
+}
+
+.LED_change button {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    font-size: 1rem;
+    color: white;
+}
+
+.LED_change .LED_change_red {
+    background: red;
+}
+
+.LED_change .LED_change_limegreen {
+    background: limegreen;
+}
+
+.LED_change .LED_change_blue {
+    background: blue;
+}
+
+.LED_change .LED_change_yellow {
+    background: yellow;
+    color: black;
+}
+
+.LED_change .LED_change_skyblue {
+    background: skyblue;
+}
+
+.LED_change .LED_change_fuchsia {
+    background: fuchsia;
+}
+
+.LED_change .LED_change_white {
+    background: white;
+    color: black;
+}
+
+.LED_change_key {
+    font-size: 0.9rem;
+}
